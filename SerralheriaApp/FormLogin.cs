@@ -29,6 +29,5 @@ namespace SerralheriaApp {
 
             MessageBox.Show("Usuário ou senha inválidos.");
         }
-
     }
 }

@@ -27,7 +27,6 @@ namespace SerralheriaApp {
             formFuncionario.ShowDialog();
             AtualizarListaFuncionarios(); // Atualiza a lista ao retornar
 
-
         }
         private void AtualizarListaFuncionarios() {
             lstFuncionarios.Items.Clear();

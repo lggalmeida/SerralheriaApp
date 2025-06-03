@@ -5,8 +5,7 @@ using System.Windows.Forms;
 namespace SerralheriaApp {
 
     public partial class FormCadastroFuncionario : Form {
-        private void label4_Click(object sender, EventArgs e) {
-        }
+        
         private List<Cargo> cargosDisponiveis;
         private List<Funcionario> funcionarios = new List<Funcionario>();
 
@@ -38,7 +37,6 @@ namespace SerralheriaApp {
             };
 
             funcionarios.Add(funcionario);
-            // lstFuncionarios.Items.Add(funcionario);
 
             txtNome.Clear();
             txtCPF.Clear();
