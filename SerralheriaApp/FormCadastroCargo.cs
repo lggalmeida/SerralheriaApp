@@ -12,9 +12,6 @@ namespace SerralheriaApp {
     public partial class FormCadastroCargo : Form {
 
         private List<Cargo> cargos = new List<Cargo>();
-        public FormCadastroCargo() {
-            InitializeComponent();
-        }
 
         public FormCadastroCargo(List<Cargo> cargos) {
             InitializeComponent();
@@ -41,6 +38,10 @@ namespace SerralheriaApp {
             txtNome.Clear();
             txtDescricao.Clear();
             txtNome.Focus();
+        }
+
+        private void FormCadastroCargo_Load(object sender, EventArgs e) {
+
         }
     }
 }

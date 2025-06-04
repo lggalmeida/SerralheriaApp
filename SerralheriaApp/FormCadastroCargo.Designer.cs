@@ -34,15 +34,16 @@
             // lblNome
             // 
             this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.Location = new System.Drawing.Point(13, 13);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(84, 13);
+            this.lblNome.Size = new System.Drawing.Size(113, 16);
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome do Cargo:";
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(16, 30);
+            this.txtNome.Location = new System.Drawing.Point(16, 32);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(100, 20);
             this.txtNome.TabIndex = 1;
@@ -50,15 +51,16 @@
             // lblDescricao
             // 
             this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(13, 53);
+            this.lblDescricao.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao.Location = new System.Drawing.Point(13, 55);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(58, 13);
+            this.lblDescricao.Size = new System.Drawing.Size(77, 16);
             this.lblDescricao.TabIndex = 2;
             this.lblDescricao.Text = "Descrição:";
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(16, 69);
+            this.txtDescricao.Location = new System.Drawing.Point(16, 74);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(100, 20);
             this.txtDescricao.TabIndex = 3;
@@ -66,17 +68,16 @@
             // lstCargos
             // 
             this.lstCargos.FormattingEnabled = true;
-            this.lstCargos.Location = new System.Drawing.Point(16, 95);
+            this.lstCargos.Location = new System.Drawing.Point(16, 100);
             this.lstCargos.Name = "lstCargos";
-            this.lstCargos.Size = new System.Drawing.Size(222, 95);
+            this.lstCargos.Size = new System.Drawing.Size(338, 95);
             this.lstCargos.TabIndex = 5;
-            this.lstCargos.SelectedIndexChanged += new System.EventHandler(this.lstCargos_SelectedIndexChanged);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(16, 196);
+            this.btnSalvar.Location = new System.Drawing.Point(16, 201);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(74, 23);
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -86,15 +87,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 457);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(372, 242);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.lstCargos);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormCadastroCargo";
             this.Text = "FormCadastroCargo";
+            this.Load += new System.EventHandler(this.FormCadastroCargo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

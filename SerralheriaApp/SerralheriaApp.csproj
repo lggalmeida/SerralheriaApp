@@ -48,13 +48,11 @@
   <ItemGroup>
     <Compile Include="Administrador.cs" />
     <Compile Include="Cargo.cs" />
-    <Compile Include="..\..\..\trabalhoPOO\FormCadastroCargo.cs">
+    <Compile Include="FormCadastroCargo.cs">
       <SubType>Form</SubType>
-      <Link>FormCadastroCargo.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\trabalhoPOO\FormCadastroCargo.Designer.cs">
+    <Compile Include="FormCadastroCargo.Designer.cs">
       <DependentUpon>FormCadastroCargo.cs</DependentUpon>
-      <Link>FormCadastroCargo.Designer.cs</Link>
     </Compile>
     <Compile Include="FormCadastroFuncionario.cs">
       <SubType>Form</SubType>
@@ -79,9 +77,8 @@
     <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="..\..\..\trabalhoPOO\FormCadastroCargo.resx">
+    <EmbeddedResource Include="FormCadastroCargo.resx">
       <DependentUpon>FormCadastroCargo.cs</DependentUpon>
-      <Link>FormCadastroCargo.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroFuncionario.resx">
       <DependentUpon>FormCadastroFuncionario.cs</DependentUpon>
