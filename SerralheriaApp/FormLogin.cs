@@ -22,7 +22,7 @@ namespace SerralheriaApp {
                     // Abre a tela principal e fecha a de login
                     var formPrincipal = new FormPrincipal();
                     formPrincipal.Show();
-                    this.Hide(); // esconde a tela de login (poderia usar this.Close() também)
+                    this.Hide();
                     return;
                 }
             }

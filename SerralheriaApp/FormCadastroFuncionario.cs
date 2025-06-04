@@ -41,8 +41,6 @@ namespace SerralheriaApp {
             txtNome.Clear();
             txtCPF.Clear();
             txtNome.Focus();
-
-
         }
     }
 }
