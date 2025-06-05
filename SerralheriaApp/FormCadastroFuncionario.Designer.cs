@@ -28,8 +28,8 @@
             this.lblCPF = new System.Windows.Forms.Label();
             this.lblCargo = new System.Windows.Forms.Label();
             this.txtCPF = new System.Windows.Forms.TextBox();
-            this.cmbCargo = new System.Windows.Forms.ComboBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.clbCargos = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // lblNome
@@ -76,17 +76,9 @@
             this.txtCPF.Size = new System.Drawing.Size(100, 20);
             this.txtCPF.TabIndex = 4;
             // 
-            // cmbCargo
-            // 
-            this.cmbCargo.FormattingEnabled = true;
-            this.cmbCargo.Location = new System.Drawing.Point(12, 118);
-            this.cmbCargo.Name = "cmbCargo";
-            this.cmbCargo.Size = new System.Drawing.Size(262, 21);
-            this.cmbCargo.TabIndex = 7;
-            // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(12, 145);
+            this.btnCadastrar.Location = new System.Drawing.Point(12, 218);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btnCadastrar.TabIndex = 8;
@@ -94,14 +86,22 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // clbCargos
+            // 
+            this.clbCargos.FormattingEnabled = true;
+            this.clbCargos.Location = new System.Drawing.Point(15, 118);
+            this.clbCargos.Name = "clbCargos";
+            this.clbCargos.Size = new System.Drawing.Size(120, 94);
+            this.clbCargos.TabIndex = 9;
+            // 
             // FormCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(287, 180);
+            this.ClientSize = new System.Drawing.Size(287, 286);
+            this.Controls.Add(this.clbCargos);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.cmbCargo);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.lblCargo);
             this.Controls.Add(this.lblCPF);
@@ -123,7 +123,7 @@
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.TextBox txtCPF;
-        private System.Windows.Forms.ComboBox cmbCargo;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.CheckedListBox clbCargos;
     }
 }

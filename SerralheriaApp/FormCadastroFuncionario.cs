@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SerralheriaApp {
@@ -15,32 +16,47 @@ namespace SerralheriaApp {
             funcionarios = funcionariosRef; // Referência compartilhada
         }
 
-        private void FormCadastroFuncionario_Load(object sender, EventArgs e) {
-            cmbCargo.DataSource = cargosDisponiveis;
-            cmbCargo.DisplayMember = "Nome";
+        private void FormCadastroFuncionario_Load(object sender, EventArgs e)
+        {
+            clbCargos.DataSource = null;
+            clbCargos.DataSource = cargosDisponiveis;
+            clbCargos.DisplayMember = "Nome";
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e) {
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
             string nome = txtNome.Text.Trim();
             string cpf = txtCPF.Text.Trim();
-            Cargo cargoSelecionado = (Cargo)cmbCargo.SelectedItem;
+            var cargosSelecionados = clbCargos.CheckedItems.Cast<Cargo>().ToList();
 
-            if (string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(cpf) || cargoSelecionado == null) {
+            if (string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(cpf) || cargosSelecionados.Count == 0)
+            {
                 MessageBox.Show("Preencha todos os campos.");
                 return;
             }
 
-            Funcionario funcionario = new Funcionario {
+            Funcionario funcionario = new Funcionario
+            {
                 Nome = nome,
                 Cpf = cpf,
-                Cargo = cargoSelecionado
+                Cargos = cargosSelecionados
             };
+
+            foreach (var cargo in cargosSelecionados)
+            {
+                cargo.Funcionarios.Add(funcionario);
+            }
 
             funcionarios.Add(funcionario);
 
             txtNome.Clear();
             txtCPF.Clear();
             txtNome.Focus();
+            for (int i = 0; i < clbCargos.Items.Count; i++)
+            {
+                clbCargos.SetItemChecked(i, false);
+            }
         }
     }
 }
